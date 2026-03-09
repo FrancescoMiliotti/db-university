@@ -1,0 +1,33 @@
+1. 	SELECT COUNT(*) AS risultato, date_of_birth
+	FROM db_university.students
+	WHERE date_of_birth BETWEEN "1990-01-01" AND "1991-01-01"
+
+2.	SELECT COUNT(*) AS risultato
+	FROM db_university.courses
+	WHERE cfu > 10
+
+3.	SELECT *
+	FROM db_university.students
+	WHERE date_of_birth < "1995-03-10"
+
+4.	SELECT COUNT(*) AS risultato, period
+	FROM db_university.courses
+	WHERE period LIKE "I semestre"
+
+5. 	SELECT * FROM db_university.exams
+	WHERE date = "2020-06-20" AND hour > "14:00:00";
+
+6. 	SELECT COUNT(*) AS risultato
+	FROM db_university.degrees
+	WHERE name LIKE "%Magistrale%";
+
+7.  	SELECT COUNT(*) AS departments
+	FROM db_university.departments
+
+8. 	SELECT COUNT(*) AS risultato
+	FROM db_university.teachers
+	WHERE phone IS NULL
+
+
+	
+	
