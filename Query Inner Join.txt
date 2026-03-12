@@ -1,0 +1,25 @@
+1. 	SELECT *
+	FROM students
+	INNER JOIN degrees
+	ON students.degree_id = degrees.id
+    	WHERE degrees.name like"Corso di Laurea in Economia"
+
+2. 	SELECT degrees.name, level, departments.name
+	FROM degrees
+	INNER JOIN departments
+	ON degrees.department_id = departments.id
+    	WHERE level = "magistrale" and departments.name LIKE "%Neuroscienze%"
+
+3. 	SELECT courses.name, period , cfu , teacher_id
+	FROM courses
+	INNER JOIN course_teacher
+	ON course_teacher.course_id = courses.id
+    	WHERE teacher_id = "44"
+
+4. 	SELECT students.name , students.surname , degrees.name AS Corso_di_Laurea, departments.name AS Dipartimento
+	FROM students
+	INNER JOIN degrees 
+   	 ON students.degree_id = degrees.id 
+   	 INNER JOIN departments	   
+   	 ON degrees.department_id = departments.id
+   	 ORDER BY surname
