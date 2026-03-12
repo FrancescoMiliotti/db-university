@@ -1,0 +1,18 @@
+1.	SELECT COUNT(id) as ISCRITTI,
+	YEAR (enrolment_date) AS ANNO 
+	FROM db_university.students
+	GROUP BY ANNO
+
+2.	SELECT office_address, COUNT(*) AS numero_professori
+	FROM db_university.teachers
+	GROUP BY office_address;
+
+
+3.	SELECT exam_id , ROUND(AVG (vote) ,2) as MEDIA_VOTO
+	FROM db_university.exam_student
+	GROUP BY exam_id
+	ORDER BY MEDIA_VOTO DESC
+
+4.	SELECT department_id , COUNT(*) AS NUMERO_CORSI
+	FROM db_university.degrees
+	GROUP BY department_id
